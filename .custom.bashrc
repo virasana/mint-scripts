@@ -8,8 +8,7 @@ alias pbpaste='xclip -selection clipboard -o'
 alias gh='cd /home/jeanpierre/git'
 GH=/home/jeanpierre/git
 
-#export GOROOT=$(dirname $(which go))
-PATH="$PATH:$(which go)"
+#PATH="$PATH:$(which go)"
 export GOPATH=$GH
 
 
@@ -25,8 +24,10 @@ function editbash {
   vim "${GH}/mint-scripts/.custom.bashrc"
 }
 
-
 function reloadbash {
   source $HOME/.bashrc
 }
 
+function mintscripts {
+  cd "${GH}/mint-scripts"
+}
