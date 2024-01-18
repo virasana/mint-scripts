@@ -1,14 +1,16 @@
 #! /usr/bin/env bash
-
-shopt -s direxpand # stops bash escaping the dollar signs when using autocomplete (i.e. TAB)
+HOME=/home/jeanpierre
 
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
+export VISUAL=vim
+export EDITOR=vim
+
 alias gh='cd /home/jeanpierre/git'
 GH=/home/jeanpierre/git
 
-#PATH="$PATH:$(which go)"
+PATH="$PATH:/usr/local/go/bin"
 export GOPATH=$GH
 
 
@@ -31,3 +33,4 @@ function reloadbash {
 function mintscripts {
   cd "${GH}/mint-scripts"
 }
+
