@@ -3,6 +3,7 @@ HOME=/home/jeanpierre
 
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+alias rs='reset'
 
 alias t=terraform
 alias k=kubectl
@@ -38,6 +39,7 @@ function today {
 
 function editbash {
   vim "${GH}/mint-scripts/.custom.bashrc"
+  reloadbash
 }
 
 function reloadbash {
@@ -56,3 +58,17 @@ function gpush {
   git add . && git commit && git push -u origin main
 }
 
+function l2 {
+  echo 'ls -lhart'
+  ls -lhart
+}
+
+
+function l1 {
+  ls -1
+}
+
+
+function pp {
+  kubectl get po --sort-by='.metadata.creationTimestamp'
+}
